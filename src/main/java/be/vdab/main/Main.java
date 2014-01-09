@@ -10,12 +10,12 @@ public class Main {
 
 	public static void main(String[] args) {
 	   try (ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring/restClient.xml")) {
-			FiliaalClient filiaalClient = context.getBean(FiliaalClient.class);
-			FiliaalListREST filiaalListREST = filiaalClient.findAll();
-			for (FiliaalListItemREST filiaalItem : filiaalListREST.getFilialen()) {
-			System.out.println(filiaalItem.getId() + ":" + filiaalItem.getNaam());
+			  FiliaalClient filiaalClient = context.getBean(FiliaalClient.class);
+			  FiliaalListREST filiaalListREST = filiaalClient.findAll();
+			  for (FiliaalListItemREST filiaalItem : filiaalListREST.getFilialen()) {
+			  System.out.println(filiaalItem.getId() + ":" + filiaalItem.getNaam());
 			}
-			}
+		}
 
 	}
 
